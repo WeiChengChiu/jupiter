@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { passwords: 'users/passwords', registrations: 'users/registrations'}
   # omniauth
-  get "/authorizations/:provider/callback", to: "authorizations#callback"
+  get "/authorizations/:provider/callback", to: "authorizations#callback", as: :omniauth_callback
   get "/authorizations/failure" => "authorizations#failue", as: :auth_failure
   Setting.omniauth.providers.keys.each do |provider|
     get "/authorizations/#{provider}", as: "auth_#{provider}"
