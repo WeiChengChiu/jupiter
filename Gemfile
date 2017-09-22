@@ -135,6 +135,7 @@ gem 'ransack'
 # omniauth
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'omniauth-oauth2', '~> 1.3.1'
 
 # third-party api
 gem 'octokit'
